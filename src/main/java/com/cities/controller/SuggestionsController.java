@@ -26,7 +26,7 @@ public class SuggestionsController {
 	
 	@GetMapping(value = "suggestions")
     @ResponseBody
-    public ResponseEntity<?> search(@RequestParam(value = "p") String p, 
+    public ResponseEntity<?> suggestions(@RequestParam(value = "p") String p, 
 									@RequestParam(value = "latitude") String latitude, 
     							    @RequestParam(value = "longitude") String longitude){
 		List<Suggestions> resulList = suggestionsService.search(p, latitude, longitude);

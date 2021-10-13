@@ -19,7 +19,6 @@ import com.cities.pojo.Suggestions;
 
 @Component
 public class SuggestionsComponent {
-
 	
 	public ArrayList<String[]> tsvr(File test2) {
 	    ArrayList<String[]> Data = new ArrayList<>(); 
@@ -30,10 +29,10 @@ public class SuggestionsComponent {
 	            Data.add(lineItems); 
 	        }
 	    } catch (Exception e) {
-	        System.out.println("Something went wrong");
+	        
 	    }
 	    
-	    Data.forEach(array -> System.out.println(Arrays.toString(array)));
+//	    Data.forEach(array -> System.out.println(Arrays.toString(array)));
 	    return Data;
 	}
 	
@@ -64,8 +63,6 @@ public class SuggestionsComponent {
 			    suggestions.setTz(tz);
 			    
 			    String name = (String) city.get("name");
-			    
-			    
 			    
 			    if (name!=null) {
 			    	
@@ -112,7 +109,6 @@ public class SuggestionsComponent {
         	   
         }
         score =(double) aux.length()/length1;
-        System.out.println(predeterminada + " - " + entrada + " : score " + score);
 
         return score;
 
