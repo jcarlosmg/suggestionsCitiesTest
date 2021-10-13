@@ -18,13 +18,13 @@ import com.cities.pojo.Suggestions;
 import com.cities.services.ISuggestionsService;
 
 @RestController
-@RequestMapping("/suggestions")
+@RequestMapping("/")
 public class SuggestionsController {
 	
 	@Autowired
 	private ISuggestionsService suggestionsService;
 	
-	@GetMapping(value = "/search")
+	@GetMapping(value = "suggestions")
     @ResponseBody
     public ResponseEntity<?> search(@RequestParam(value = "p") String p, 
 									@RequestParam(value = "latitude") String latitude, 
